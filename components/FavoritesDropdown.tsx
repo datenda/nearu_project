@@ -38,7 +38,7 @@ export default function FavoritesDropdown({ episodes }: Props) {
   }
 
   return (
-    <div>
+    <div className="my-4">
       <label htmlFor="favorites-dropdown" className="sr-only">
         Select your favorite episode
       </label>

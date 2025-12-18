@@ -11,6 +11,8 @@ A small **Next.js + TypeScript** web app to explore the TV show **“Powerpuff G
 
 ## Setup
 
+**Recommended to use in Chrome**
+
 ```bash
 git clone https://github.com/datenda/nearu_project.git
 cd nearu_project
@@ -65,6 +67,10 @@ npm run dev
 - Persist favorites in a server-side DB with user accounts.  
 - Implement infinite scrolling or server-side pagination for performance.  
 - Add automated accessibility tests and more comprehensive unit tests.
+
+### Custom Dropdown Implementation
+
+- I opted to create a custom dropdown instead of using the Atlassian component because the original component caused accessibility issues with screen readers.
 
 ## Development Process
 
