@@ -18,16 +18,13 @@ export default function EpisodeList({
   currentPage = 1,
   pageSize = 5,
 }: Props) {
-  const [favorites, setFavorites] = useState<number[]>([])
+  const [favorites, setFavorites] = useState<number[]>(() => {
+    if (typeof window === "undefined") return []
+    const saved = localStorage.getItem("favoriteEpisodes")
+    return saved ? JSON.parse(saved) : []
+  })
   const [focusedEpisode, setFocusedEpisode] = useState<string>("")
   const router = useRouter()
-
-  // Load favorites from localStorage
-  useEffect(() => {
-    if (typeof window === "undefined") return
-    const saved = localStorage.getItem("favoriteEpisodes")
-    if (saved) setFavorites(JSON.parse(saved))
-  }, [])
 
   const toggleFavorite = (id: number) => {
     const updated = favorites.includes(id)
