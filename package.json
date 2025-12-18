@@ -6,21 +6,40 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "format": "prettier --write .",
+    "test": "vitest",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
+    "@atlaskit/button": "^23.9.1",
+    "@atlaskit/heading": "^5.2.16",
+    "@atlaskit/page": "^14.0.1",
+    "@atlaskit/section-message": "^8.11.2",
+    "@atlaskit/tokens": "^9.0.0",
+    "@vitejs/plugin-react": "^4.7.0",
     "next": "16.0.10",
-    "react": "19.2.1",
-    "react-dom": "19.2.1"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.1",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.0.10",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "jsdom": "^21.1.2",
+    "prettier": "^3.7.4",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^4.0.16"
   }
 }
